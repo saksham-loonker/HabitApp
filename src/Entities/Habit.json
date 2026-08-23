@@ -1,0 +1,40 @@
+{
+  "name": "Habit",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "color": {
+      "type": "string"
+    },
+    "frequency": {
+      "type": "string",
+      "enum": [
+        "daily",
+        "weekly"
+      ],
+      "default": "daily"
+    },
+    "target_count": {
+      "type": "number",
+      "default": 1
+    },
+    "completed_dates": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "streak": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "required": [
+    "name"
+  ]
+}
